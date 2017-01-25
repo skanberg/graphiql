@@ -1,7 +1,6 @@
 import React from "react";
 import GraphiQL from "graphiql";
 import "graphiql/graphiql.css";
-import "./style.css";
 
 function graphQLFetcher(graphQLParams) {
   return fetch(window.location.origin + "/graphql", {
