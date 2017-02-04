@@ -3,7 +3,7 @@ import GraphiQL from "graphiql";
 import "graphiql/graphiql.css";
 
 function graphQLFetcher(graphQLParams) {
-  return fetch(window.location.origin + "/graphql", {
+  return fetch("http://10.10.10.91:4567/graphql", {
     method: "post",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(graphQLParams),
@@ -11,7 +11,7 @@ function graphQLFetcher(graphQLParams) {
 }
 
 const App = () => (
-  <GraphiQL fetcher={graphQLFetcher} schema={null}>
+  <GraphiQL fetcher={graphQLFetcher}>
     <GraphiQL.Toolbar>
       <input type="text" />
     </GraphiQL.Toolbar>
